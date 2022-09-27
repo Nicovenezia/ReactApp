@@ -1,0 +1,24 @@
+.Navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+}
+
+.h1-name{
+    font-size: 30px;
+    margin: 10px;
+    color: aliceblue;
+}
+
+.box-btn{
+    margin: 10px;
+    border-radius: 10px;
+    background-color: black;
+    border: 0px solid #0066cc;
+    color: #adb5bd;
+}
+
+.box-btn:hover{
+    color: #0066cc;
+}

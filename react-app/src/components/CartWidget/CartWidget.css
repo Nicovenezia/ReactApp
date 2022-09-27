@@ -1,0 +1,15 @@
+.box-img{
+    display: flex;
+    align-items: center;
+    margin: 0px;  
+}
+
+.img-bag{
+    height: 25px;
+}
+
+.p-bag{
+    font-size: 17px;
+    margin: 0px;
+    color: #adb5bd;
+}

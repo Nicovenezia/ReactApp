@@ -1,19 +1,19 @@
-import App from "../../App"
-import "./navbar.css"
+
+import "./Navbar.css"
 import CartWidget from "../CartWidget/CartWidget"
 
 const Navbar = () => {
     return(
-        <nav>
-            <h1>Ecommerce</h1>
+        <nav className="Navbar">
+            <h1 className="h1-name">iPhoneTouch</h1>
             <div>
-                <button>Productos</button>
-                <button>Nosotros</button>
-                <button>Contacto</button>
+                <button className="box-btn">Productos</button>
+                <button className="box-btn">Nosotros</button>
+                <button className="box-btn">Contacto</button>
             </div>
             <CartWidget />
         </nav>
     )
 }
 
-export default App
+export default Navbar

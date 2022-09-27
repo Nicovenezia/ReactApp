@@ -1,0 +1,9 @@
+.box-itemlist{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h1-item{
+    margin: 10px;
+}
