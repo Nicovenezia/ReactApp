@@ -9,6 +9,8 @@
     font-size: 30px;
     margin: 10px;
     color: aliceblue;
+    font-family: sans-serif;
+    text-decoration: none;
 }
 
 .box-btn{
@@ -17,6 +19,7 @@
     background-color: black;
     border: 0px solid #0066cc;
     color: #adb5bd;
+    text-decoration: none;
 }
 
 .box-btn:hover{

@@ -1,0 +1,23 @@
+.container-counter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.box-counter{
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(230, 230, 230);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.p-count{
+    font-size: 17px;
+    margin: 0px 40px;
+    color: #000000;
+
+}
