@@ -1,12 +1,11 @@
 import { useState } from "react"
 import "./Counter.css"
 
-const Counter = () => {
-
+const Counter = ({stock = 0, initial = 1, onAdd}) => {
     const [count, setCount] = useState(0)
 
     const increment = () => {
-        if(count < 10){
+        if(count < stock){
             setCount(count + 1)
         }
     } 
@@ -20,12 +19,12 @@ const Counter = () => {
     return(
         <div className="container-counter">
             <div className="box-counter">
-                <button onClick={decrement}>-</button>
+                <button className="button-count" onClick={decrement}>-</button>
                 <p className="p-count">{count}</p>
-                <button onClick={increment}>+</button>
+                <button className="button-count" onClick={increment}>+</button>
             </div>
             <div className="box-agregar">
-                <button>Agregar al carrito</button>
+                <button className="box-add" onClick={() => onAdd(count)}>Agregar al carrito</button>
             </div>
         </div>
     )

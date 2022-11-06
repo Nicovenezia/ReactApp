@@ -1,9 +1,10 @@
 import "./ItemListContainer.css"
 import { useState, useEffect } from "react"
-import { getProducts, getProductByCategory } from "../../asyncMock"
 import ItemList from "../ItemList/ItemList"
 import { useParams } from "react-router-dom"
 import { DotSpinner } from '@uiball/loaders'
+import { collection, getDocs, query, where } from "firebase/firestore"
+import { db } from "../../services/firebase"
 
 const ItemListContainer = ({greeting}) => {
 
@@ -15,10 +16,17 @@ const ItemListContainer = ({greeting}) => {
     useEffect(() => {
         setLoading(true)
 
-        const setCategory = categoryId ? getProductByCategory : getProducts
+        const collectionRef = categoryId 
+            ? query(collection(db, "products"), where("category", "==", categoryId))
+            : collection(db, "products")
 
-        setCategory(categoryId).then(Response => {
-            setProducts(Response)
+        getDocs(collectionRef).then(Response => {
+            const productsAdapted = Response.docs.map(doc => {
+                const data = doc.data()
+
+                return  {id: doc.id, ...data}
+            })
+            setProducts(productsAdapted)
         }).finally(() => {
             setLoading(false)
         })
