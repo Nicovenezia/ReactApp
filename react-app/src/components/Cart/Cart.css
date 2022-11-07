@@ -1,0 +1,12 @@
+.container-cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.h2-cart-empty{
+    font-size: 30px;
+    margin: 30px;
+}

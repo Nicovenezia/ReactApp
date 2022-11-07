@@ -4,9 +4,10 @@ import Counter from "../Counter/Counter.js"
 import { useContext } from "react"
 import { Context } from "../../context/CartContext.js"
 import { NotificationContext } from "../../notification/NotificationService"
+import { Link } from "react-router-dom"
 
 const ItemDetail = ({ id, name, price, category, img, stock, description}) =>{
-    const {addItem} = useContext(Context)
+    const {addItem, isInCart} = useContext(Context)
     const {setNotification} = useContext(NotificationContext)
 
     const handleOnAdd = (count) => {
@@ -26,7 +27,11 @@ const ItemDetail = ({ id, name, price, category, img, stock, description}) =>{
                 <p>{description}</p>
             </div>
             <div>
-                <Counter onAdd={handleOnAdd} stock={stock}/>
+                {
+                    !isInCart(id)
+                        ? <Counter onAdd={handleOnAdd} stock={stock} />
+                        : <Link to='/cart' className="box-add">Finalizar compra</Link>
+                }
             </div>
         </div>
     )

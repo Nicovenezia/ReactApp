@@ -1,0 +1,28 @@
+.cart-item{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.h2-cart-item{
+    margin: 20px;
+    font-size: 30px;
+}
+
+.p-cart-item{
+    margin: 20px;
+    font-size: 16px;
+}
+
+.button-cart-item{
+    background-color: rgb(255, 63, 63);
+    border-radius: 8px;
+    border: solid 1px rgb(156, 156, 156);
+    padding: 2px 10px;
+    margin: 10px;
+}
+
+.button-cart-item:hover{
+    background-color: rgb(170, 0, 0);
+}
