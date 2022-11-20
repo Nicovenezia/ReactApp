@@ -3,20 +3,22 @@ import { Context } from "../../context/CartContext"
 import { addDoc, collection, getDocs, query, where, documentId, writeBatch } from "firebase/firestore"
 import { NotificationContext } from "../../notification/NotificationService"
 import { db } from "../../services/firebase"
-import ItemForm from "../ItemForm/ItemForm.js"
+import { FromContext } from "../../context/ItemForm/ItemForm.js"
+import ItemForm from "../../context/ItemForm/ItemForm.js"
 import "./Checkout.css"
 
 const Checkout = () => {
     const { cart, total } = useContext(Context)
     const { setNotification } = useContext(NotificationContext)
+    const { setName, setPhone, setEmail } = useContext(FromContext)
 
     const createOrder = async () =>{
         try {
             const Order = {
                 buyer: {
-                    name:"",
-                    phone:"",
-                    mail:"",
+                    name: setName,
+                    phone: setPhone,
+                    mail: setEmail,
                 },
                 items: cart,
                 total: total,

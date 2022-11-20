@@ -1,0 +1,44 @@
+.container-form{
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 3rem 5rem rgb(0 0 0 / 10%);
+    border: 1px solid rgba(255, 255, 255, 0.711);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    background-color: #0091ff91;
+}
+
+.box-form{
+    padding: 35px 30px;
+    border-radius: 50px;
+}
+
+.box-h2-form{
+    font-size: 30px;
+    text-align: center;
+    line-height: 1.2;
+    margin: 10px;
+}
+
+.container-input-form{
+    margin: 25px 0 20px;
+}
+
+.box-input-form{
+    margin: 25px;
+}
+
+.input-form{
+    display: block;
+    height: 45px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #00dae4;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: 16px;
+}
